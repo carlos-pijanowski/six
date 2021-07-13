@@ -23,11 +23,11 @@ class Home extends StatelessWidget {
           color: Theme.of(context).primaryColor,
           padding: const EdgeInsets.symmetric(horizontal: 50.0, vertical: 15.0),
           child: Text(url),
-          onPressed: () => _handleURLButtonPress(context, url),
+          onPressed: () => _atualizarLinkWebView(context, url),
         ));
   }
 
-  void _handleURLButtonPress(BuildContext context, String url) {
+  void _atualizarLinkWebView(BuildContext context, String url) {
     Navigator.push(context,
         MaterialPageRoute(builder: (context) => WebViewContainer(url)));
   }
